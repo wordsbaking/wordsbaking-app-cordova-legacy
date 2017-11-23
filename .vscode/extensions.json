@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "streetsidesoftware.code-spell-checker",
+    "shardulm94.trailing-spaces",
+    "esbenp.prettier-vscode"
+  ]
+}

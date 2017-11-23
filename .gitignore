@@ -1,0 +1,20 @@
+# dependencies
+/node_modules
+/www
+
+/platforms/*
+/plugins/*
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# log files
+*.log
+
+# System Files
+.DS_Store
+Thumbs.db
