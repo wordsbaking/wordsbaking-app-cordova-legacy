@@ -11,5 +11,6 @@
   "less.validate": false,
   "css.validate": false,
   "scss.validate": false,
-  "html.format.enable": false
+  "html.format.enable": false,
+  "xmlTools.splitXmlnsOnFormat": false
 }
