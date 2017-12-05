@@ -51,7 +51,8 @@
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="Orientation" value="portrait" />
     <preference name="ShowSplashScreenSpinner" value="false" />
-    <preference name="SplashShowOnlyFirstTime" value="true" />
+    <preference name="FadeSplashScreen" value="true" />
+    <preference name="AutoHideSplashScreen" value="false" />
     <engine name="android" spec="~6.3.0" />
     <engine name="browser" spec="^5.0.1" />
     <engine name="ios" spec="^4.5.4" />
