@@ -55,6 +55,12 @@
         <splash src="res/screen/ios/Default@2x~ipad~comany.png" />
         <preference name="StatusBarStyle" value="lightcontent" />
         <preference name="FadeSplashScreen" value="true" />
+        <config-file parent="NSCameraUsageDescription" target="*-Info.plist">
+            <string>用户头像上传</string>
+        </config-file>
+        <config-file parent="CFBundleDisplayName" target="*-Info.plist">
+            <string>词焙</string>
+        </config-file>
     </platform>
     <feature name="CDVWKWebViewEngine">
         <param name="ios-package" value="CDVWKWebViewEngine" />
@@ -71,9 +77,6 @@
     <preference name="Orientation" value="portrait" />
     <preference name="ShowSplashScreenSpinner" value="false" />
     <preference name="AutoHideSplashScreen" value="false" />
-    <config-file parent="CFBundleDisplayName" platform="ios" target="*-Info.plist">
-        <string>词焙</string>
-    </config-file>
     <engine name="browser" spec="^5.0.1" />
     <engine name="ios" spec="^4.5.4" />
     <engine name="android" spec="^6.3.0" />
