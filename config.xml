@@ -88,4 +88,6 @@
     <plugin name="cordova-plugin-android-window-background" spec="^1.0.1">
         <variable name="WINDOW_BACKGROUND_COLOR" value="#000000" />
     </plugin>
+    <plugin name="cordova-plugin-tts" spec="^0.2.3" />
+    <plugin name="cordova-plugin-keyboard" spec="^1.2.0" />
 </widget>
