@@ -58,9 +58,6 @@
         <config-file parent="NSCameraUsageDescription" target="*-Info.plist">
             <string>用户拍摄自定义头像</string>
         </config-file>
-        <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryUsageDescription">
-            <string>用户选择自定义头像</string>
-        </edit-config>
         <config-file parent="CFBundleDisplayName" target="*-Info.plist">
             <string>词焙</string>
         </config-file>
