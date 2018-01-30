@@ -56,8 +56,11 @@
         <preference name="StatusBarStyle" value="lightcontent" />
         <preference name="FadeSplashScreen" value="true" />
         <config-file parent="NSCameraUsageDescription" target="*-Info.plist">
-            <string>用户头像上传</string>
+            <string>用户拍摄自定义头像</string>
         </config-file>
+        <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryUsageDescription">
+            <string>用户选择自定义头像</string>
+        </edit-config>
         <config-file parent="CFBundleDisplayName" target="*-Info.plist">
             <string>词焙</string>
         </config-file>
@@ -90,4 +93,9 @@
     </plugin>
     <plugin name="cordova-plugin-tts" spec="^0.2.3" />
     <plugin name="cordova-plugin-keyboard" spec="^1.2.0" />
+    <plugin name="cordova-plugin-camera" spec="^4.0.2" />
+    <plugin name="cordova-plugin-media-capture" spec="^3.0.1" />
+    <plugin name="cordova-plugin-media" spec="^5.0.2">
+        <variable name="KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE" value="NO" />
+    </plugin>
 </widget>

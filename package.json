@@ -15,7 +15,12 @@
         "WINDOW_BACKGROUND_COLOR": "#000000"
       },
       "cordova-plugin-tts": {},
-      "cordova-plugin-keyboard": {}
+      "cordova-plugin-keyboard": {},
+      "cordova-plugin-camera": {},
+      "cordova-plugin-media-capture": {},
+      "cordova-plugin-media": {
+        "KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE": "NO"
+      }
     },
     "platforms": [
       "browser",
@@ -29,8 +34,12 @@
     "cordova-browser": "^5.0.1",
     "cordova-ios": "^4.5.4",
     "cordova-plugin-android-window-background": "^1.0.1",
+    "cordova-plugin-camera": "^4.0.2",
+    "cordova-plugin-file": "^6.0.1",
     "cordova-plugin-ionic-webview": "^1.1.16",
     "cordova-plugin-keyboard": "^1.2.0",
+    "cordova-plugin-media": "^5.0.2",
+    "cordova-plugin-media-capture": "^3.0.1",
     "cordova-plugin-splashscreen": "^4.1.0",
     "cordova-plugin-statusbar": "^2.3.0",
     "cordova-plugin-tts": "^0.2.3",
