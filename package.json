@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "android-versions": "^1.2.1",
-    "cordova-android": "^6.3.0",
+    "cordova-android": "^6.4.0",
     "cordova-browser": "^5.0.1",
     "cordova-ios": "^4.5.4",
     "cordova-plugin-android-window-background": "^1.0.1",

@@ -3,7 +3,7 @@
   "files.insertFinalNewline": true,
   "files.eol": "\n",
   "files.encoding": "utf8",
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.insertSpaces": true,
   "editor.trimAutoWhitespace": true,
   "editor.rulers": [80],
@@ -11,6 +11,7 @@
   "less.validate": false,
   "css.validate": false,
   "scss.validate": false,
+  "javascript.format.enable": false,
   "html.format.enable": false,
   "xmlTools.splitXmlnsOnFormat": false
 }
