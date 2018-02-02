@@ -1,0 +1,10 @@
+{
+  "android": {
+    "release": {
+      "keystore": "release-key.keystore",
+      "alias": "wordsbaking",
+      "storePassword": "{%^*3S[2F9",
+      "password": "3.\\&2N6#}B"
+    }
+  }
+}
