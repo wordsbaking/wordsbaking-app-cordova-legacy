@@ -91,6 +91,5 @@
     <plugin name="cordova-plugin-camera" spec="~4.0.2" />
     <plugin name="cordova-plugin-media-capture" spec="~3.0.1" />
     <plugin name="cordova-plugin-media" spec="~5.0.2" />
-    <plugin name="cordova-plugin-app-version" spec="^0.1.9" />
-    <engine name="android" spec="^6.4.0" />
+    <engine name="android" spec="~6.4.0" />
 </widget>
