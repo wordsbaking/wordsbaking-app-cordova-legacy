@@ -6,5 +6,19 @@
       "storePassword": "{%^*3S[2F9",
       "password": "3.\\&2N6#}B"
     }
+  },
+  "ios": {
+      "debug": {
+          "codeSignIdentity": "iPhone Development",
+          "provisioningProfile": "a22c5a45-745c-4258-920f-be345f9f66fe",
+          "developmentTeam": "FG35JLLMXX4A",
+          "packageType": "development"
+      },
+      "release": {
+          "codeSignIdentity": "iPhone Distribution",
+          "provisioningProfile": "a22c5a45-745c-4258-920f-be345f9f66fe",
+          "developmentTeam": "FG35JLLMXX4A",
+          "packageType": "app-store"
+      }
   }
 }

@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.mufan.wordsbaking" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="io.mufan.wordsbaking" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Wordsbaking</name>
+    <displayName>词焙</displayName>
     <description>词焙 | 快节奏的背单词应用</description>
     <author email="admin@makeflow.io" href="https://mufan.io">Mufan Inc.</author>
     <content src="index.html" />
@@ -11,6 +12,7 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <hook src="hooks/before-compile.js" type="before_compile" />
     <platform name="android">
         <allow-intent href="market:*" />
         <icon density="ldpi" src="res/icon/android/icon-36-ldpi.png" />
@@ -74,7 +76,8 @@
     <preference name="Orientation" value="portrait" />
     <preference name="ShowSplashScreenSpinner" value="false" />
     <preference name="AutoHideSplashScreen" value="false" />
-    <preference name="AppendUserAgent" value="Wordsbaking/0.0.1" />
+    <preference name="AppendUserAgent" value="Wordsbaking" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <plugin name="cordova-plugin-ionic-webview" spec="~1.1.16" />
     <plugin name="cordova-plugin-statusbar" spec="~2.3.0" />
@@ -88,9 +91,6 @@
     <plugin name="cordova-plugin-camera" spec="~4.0.2" />
     <plugin name="cordova-plugin-media-capture" spec="~3.0.1" />
     <plugin name="cordova-plugin-media" spec="~5.0.2" />
-    <plugin name="cordova-plugin-app-name">
-        <variable name="APP_NAME" value="词焙" />
-    </plugin>
-    <engine name="ios" spec="^4.5.4" />
+    <plugin name="cordova-plugin-app-version" spec="^0.1.9" />
     <engine name="android" spec="^6.4.0" />
 </widget>
