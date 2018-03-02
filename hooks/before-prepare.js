@@ -1,7 +1,6 @@
 const FS = require('fs-extra');
 const Path = require('path');
 
-const makeDir = require('make-dir');
 const minimist = require('minimist');
 const xml2js = require('xml2js');
 const v = require('villa');
