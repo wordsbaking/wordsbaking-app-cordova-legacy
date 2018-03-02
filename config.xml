@@ -12,6 +12,7 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <hook src="hooks/before-prepare.js" type="before_prepare" />
     <hook src="hooks/before-compile.js" type="before_compile" />
     <platform name="android">
         <allow-intent href="market:*" />
@@ -91,5 +92,6 @@
     <plugin name="cordova-plugin-camera" spec="~4.0.2" />
     <plugin name="cordova-plugin-media-capture" spec="~3.0.1" />
     <plugin name="cordova-plugin-media" spec="~5.0.2" />
-    <engine name="android" spec="~6.4.0" />
+    <engine name="ios" spec="^4.5.4" />
+    <engine name="android" spec="^6.4.0" />
 </widget>

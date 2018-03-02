@@ -1,21 +1,25 @@
 const FS = require('fs');
 const Path = require('path');
-const minimist = require('minimist');
 const xml2js = require('xml2js');
-const plist = require('plist');
+const plist = require('plist');;
+const minimist = require('minimist');
 
-const PLATFORMS_DIR = Path.join(__dirname, '../platforms');
-const PLATFORM_ANDROID_DIR = Path.join(PLATFORMS_DIR, 'android');
-const PLATFORM_IOS_DIR = Path.join(PLATFORM_ANDROID_DIR, 'ios');
+const {readXML, writeFile, readPList, resolveVersion} = require('./helpers');
+
+const {
+  PLATFORMS_DIR,
+  PLATFORM_ANDROID_DIR,
+  PLATFORM_IOS_DIR,
+} = require('./constants');
 
 const configXMLPath = Path.join(__dirname, '../config.xml');
 
-module.exports = async function(context) {
+module.exports = async context => {
   let configXML = await readXML(configXMLPath);
   let platforms = context.opts.platforms;
   let compileOptions = context.opts.options;
   let argv = minimist(compileOptions.argv);
-  let version = argv.version ? resolveVersion(argv.version) : undefined;
+  let version = argv['build-version'] ? resolveVersion(argv['build-version']) : undefined;
   let appName = configXML.widget.name[0];
   let displayName = configXML.widget.displayName[0];
 
@@ -42,7 +46,12 @@ module.exports = async function(context) {
     }
   }
 
-  return Promise.all(promises);
+  try {
+    await Promise.all(promises);
+  } catch (error) {
+    console.error(error);
+    process.exit(1);
+  }
 };
 
 async function preProcessAndroidPlatform(options) {
@@ -91,68 +100,9 @@ async function preProcessIOSPlatform(options) {
   await writeFile(appInfoPlistPath, plist.build(appInfoPlist));
 }
 
-function resolveVersion(versionName) {
-  if (!/^\d+\.\d+\.\d+$/.test(versionName)) {
-    throw new Error('Invalid version');
-  }
-
-  let [major, minor, patch] = versionName.split('.').map(Number);
-
-  return {
-    name: versionName,
-    code: major * 10000 + minor * 100 + patch,
-  };
-}
-
 async function updateAndroidBuildVersion(version) {
 
 }
 
 async function updateIOSBuildVersion(version) {
-}
-
-async function readXML(path) {
-  let content = await readFile(path);
-  return parseXML(content);
-}
-
-async function readPList(path) {
-  let content = await readFile(path);
-  return plist.parse(content);
-}
-
-function parseXML(xml) {
-  return new Promise((resolve, reject) => {
-    xml2js.parseString(xml, (error, result) => {
-      if (error) {
-        reject(error);
-      } else {
-        resolve(result);
-      }
-    });
-  });
-}
-
-function readFile(path) {
-  return new Promise((resolve, reject) => {
-    FS.readFile(path, 'utf8', (error, data) => {
-      if (error) {
-        reject(error);
-      } else {
-        resolve(data);
-      }
-    });
-  });
-}
-
-function writeFile(path, data) {
-  return new Promise((resolve, reject) => {
-    FS.writeFile(path, data, 'utf8', (error) => {
-      if (error) {
-        reject(error);
-      } else {
-        resolve();
-      }
-    });
-  });
 }
