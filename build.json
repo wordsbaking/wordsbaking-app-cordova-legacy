@@ -10,13 +10,13 @@
   "ios": {
       "debug": {
         "codeSignIdentity": "iPhone Developer: VILIC VANE (DMG83RAJWE)",
-        "provisioningProfile": "c1ffc4d9-827f-4b6d-9405-fbfbd5c99676",
-        "developmentTeam": "UMAPPVBK52",
+        "provisioningProfile": "0386bae4-ff0d-4ec9-91e8-21049eb3922f",
+        "developmentTeam": "DMG83RAJWE",
         "packageType": "development"
       },
       "release": {
           "codeSignIdentity": "iPhone Distribution: VILIC VANE (UMAPPVBK52)",
-          "provisioningProfile": "a851d21c-3710-467d-b06a-65bc6fb68bf0",
+          "provisioningProfile": "f8fd5987-36f2-446a-8355-fbe78a105b45",
           "developmentTeam": "UMAPPVBK52",
           "packageType": "ad-hoc"
       }
